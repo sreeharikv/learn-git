@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: "Check context Varaiables"
         run: |
-          echo " Repo Name : {{ github.repository }}
+          echo "Repo Name : {{ github.repository }}"
        
 
 
