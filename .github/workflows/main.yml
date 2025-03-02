@@ -1,0 +1,15 @@
+name: First Workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  test_context_varaiables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Check context Varaiables"
+        run: |
+          echo " Repo Name : {{ github.repository }}
+       
+
+
+  
