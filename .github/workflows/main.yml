@@ -1,14 +1,20 @@
 name: First Workflow
 on:
   workflow_dispatch:
-
+env:
+  cloud: azure_cloud
+  
 jobs:
   test_context_varaiables:
     runs-on: ubuntu-latest
+    env:
+      Greeting: hello      
     steps:
       - name: "Check context Varaiables"
         run: |
-          echo "Repo Name : {{ github.repository }}"
+          echo "$Greeting, $First_Name is using $cloud"
+        env:
+          First_name: "User"
        
 
 
