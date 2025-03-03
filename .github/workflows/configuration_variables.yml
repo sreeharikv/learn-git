@@ -1,0 +1,20 @@
+name: testing configuration variables
+
+on:
+  workflow_dispatch
+
+env:
+  cloud: azure_cloud
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu_latest
+    env:
+      Greeting: hello
+    steps:
+      - name: step-1
+        run: echo "$Greeting $First_Name is using project ${{ vars.PROJECT_ID }}"
+        env:
+          First_Name: project_user
+      
+    
