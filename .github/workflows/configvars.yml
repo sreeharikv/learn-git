@@ -5,7 +5,7 @@ env:
   cloud: azure_cloud
 jobs:
   greeting_job:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     env:
       Greeting: hello
     steps:
